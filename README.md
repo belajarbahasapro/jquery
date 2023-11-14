@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan jquery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <!-- <script>
-        $(document).ready(function () {
-            $("#button").click(function () {
-                $("p").hide();
-            });
-            $("p").click(function () {
-                $(this).hide();
-            });
-        });
-    </script> -->
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#hide").click(function () {
-                $("p").hide();
-            });
-            $("#show").click(function () {
-                $("p").show();
-            });
+        $(document).ready(function(){
+        $("#btn1").click(function(){
+        alert("Text: " + $("#paraph").text()); });
+        $("#btn2").click(function(){
+        alert("HTML: " + $("#paraph").html()); });
         });
+        $(document).ready(function(){
+        $("#btn3").click(function(){
+        alert("Value: " + $("#name").val());
+        });
+    });
     </script>
 </head>
-
 <body>
-    <p>Kalimat Paragraf Pertama.HILANG</p>
-    <p>Kalimat Paragraf Kedua.HILANG</p>
-    <!-- <button id="button">HIDE</button> -->
-    <button id="hide">Hide</button>
-    <button id="show">Show</button>
-</body>
-
-</html>
+    <p id="paraph">This is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <p>Name: <input type="text" id="name" value="Mickey Mouse"></p>
+    <button id="btn3">Show Value</button>
+    </body></html>
